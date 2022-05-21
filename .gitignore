@@ -1,0 +1,14 @@
+# Project exclude paths
+/micro-service-cloud/target/
+/micro-service-cloud-config-center-3344/target/
+/micro-service-cloud-config-client-3355/target/
+/micro-service-cloud-config-client-bus-3366/target/
+/micro-service-cloud-consumer-dept-80/target/
+/micro-service-cloud-consumer-dept-feign/target/
+/micro-service-cloud-consumer-dept-hystrix-dashboard-9002/target/
+/micro-service-cloud-erureka-7002/target/
+/micro-service-cloud-eureka-7001/target/
+/micro-service-cloud-gateway-9527/target/
+/micro-service-cloud-provider-dept-8001/target/
+/micro-service-cloud-provider-dept-8002/target/
+/micro-service-cloud-provider-dept-hystrix-8004/target/

@@ -1,0 +1,37 @@
+server:
+  port: 3344 #端口号
+spring:
+  application:
+    name: spring-cloud-config-center #服务名
+  cloud:
+    config:
+      server:
+        git:
+          # Git 地址，https://gitee.com/java-mohan/springcloud-config.git
+          # 码云（gitee）地址 uri: https://github.com/javmohan/springcloud-config.git  (github 站点访问较慢，因此这里我们使用 gitee)
+          uri: https://github.com/Kersinal/springcloud-config.git
+          #仓库名
+          search-paths:
+            #- springcloud-config  根目录下文件不需要路径 C:/Users/PAVILION/AppData/Local/Temp/config-repo-6422723755662682751/config-dev.yml
+            - config     #C:/Users/PAVILION/AppData/Local/Temp/config-repo-6422723755662682751/config/js-dev.yml
+          force-pull: true
+          # 如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写
+          username: Kersinal
+          password: 1235789zZz
+          skip-ssl-validation: true
+      #分支名
+      label: master
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: 123456
+eureka:
+  client: #将客户端注册到 eureka 服务列表内
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

@@ -1,0 +1,26 @@
+#bootstrap.yml 是系统级别的，加载优先级高于 application.yml ，负责从外部加载配置并解析
+server:
+  port: 3355
+spring:
+  rabbitmq:
+    username: admin
+    password: 123456
+    host: 127.0.0.1
+    port: 5672
+  application:
+    name: spring-cloud-config-client
+  cloud:
+    config:
+      label: master
+      name: js
+      profile: dev
+      uri: http://localhost:3344
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/, http://eureka7002.com:7002/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
