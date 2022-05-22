@@ -12,7 +12,7 @@ spring:
   cloud:
     config:
       label: master
-      name: js-str
+      name: js
       profile: dev
       uri: http://localhost:3344
 eureka:

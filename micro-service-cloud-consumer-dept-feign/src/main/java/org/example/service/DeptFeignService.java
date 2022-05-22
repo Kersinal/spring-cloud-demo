@@ -21,4 +21,6 @@ public interface DeptFeignService {
     @RequestMapping("/dept/feign/timeout")
     public String deptFeignTimeout();
 
+    @RequestMapping("/test")
+    public String test();
 }

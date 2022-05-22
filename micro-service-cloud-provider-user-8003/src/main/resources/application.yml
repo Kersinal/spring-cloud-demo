@@ -15,14 +15,3 @@ eureka:
   instance:
     instance-id: user-info-provider-8003
     prefer-ip-address: true
-    hostname: 123
-mybatis:
-  type-aliases-package: org.example.entity
-  configuration:
-    map-underscore-to-camel-case: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"

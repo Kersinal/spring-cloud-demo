@@ -1,7 +1,0 @@
-spring:
-  cloud:
-    config:
-      label: master
-      name: user-service-config
-      profile: dev
-      uri: http://localhost:3344
